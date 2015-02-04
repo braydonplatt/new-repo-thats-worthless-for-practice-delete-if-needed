@@ -5,8 +5,12 @@
   <title>Document</title>
 </head>
 <body ng-controller="mainCtrl">
-  <input ng-model="newFriend" />
-  <button ng-click="addFriend()">Submit</button>
+  Add friend: <input ng-model="newFriend" />
+  <button ng-click="addFriends()">Submit</button>
+  Remove friend: <input ng-model='oldFriend' />
+  <button ng-click="removeFriends()">Submit</button>
+  Remove All friends: <input ng-model="noFriend" />
+  <button ng-click="clearFriends()">Clear</button>
   <ul>
     <li ng-repeat="friend in friends">{{friend}} </li>
   </ul>

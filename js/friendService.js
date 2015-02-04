@@ -10,4 +10,16 @@ app.service('friendService', function(){
   this.getFriends = function(){
     return friends;
   };
+  this.removeNewFriend = function(friend){ 
+  	var index = friends.indexOf(friend);
+  	if(index !== -1){
+  		friends.splice(index, 1);
+  	};
+   
+  };
+
+  this.clearAllFriends = function(friend){
+  	friends = [];
+  }
 });
+
